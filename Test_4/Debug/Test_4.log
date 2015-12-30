@@ -1,0 +1,4 @@
+﻿  Source.cpp
+c:\users\gd_lan\git_hub\newrepo\politechnika_cpp\test_4\source.cpp(12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Test_4.vcxproj -> C:\Users\GD_Lan\Git_Hub\NewRepo\Politechnika_CPP\Test_4\Debug\Test_4_pseudolosowe.exe
+  Test_4.vcxproj -> C:\Users\GD_Lan\Git_Hub\NewRepo\Politechnika_CPP\Test_4\Debug\Test_4_pseudolosowe.pdb (Partial PDB)
