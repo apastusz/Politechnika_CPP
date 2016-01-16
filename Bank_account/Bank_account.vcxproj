@@ -18,6 +18,29 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Account.cpp" />
+    <ClCompile Include="Adress.cpp" />
+    <ClCompile Include="Bank.cpp" />
+    <ClCompile Include="Data.cpp" />
+    <ClCompile Include="Deposit_Account.cpp" />
+    <ClCompile Include="Exchange_Account.cpp" />
+    <ClCompile Include="Klient.cpp" />
+    <ClCompile Include="Main_menu.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="Saving_Account.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Account.h" />
+    <ClInclude Include="Adress.h" />
+    <ClInclude Include="Bank.h" />
+    <ClInclude Include="Data.h" />
+    <ClInclude Include="Deposit_Account.h" />
+    <ClInclude Include="Exchange_Account.h" />
+    <ClInclude Include="Klient.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="Saving_Account.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{D0173C3C-6575-49C5-AF0C-EF1FCAC711FA}</ProjectGuid>
     <RootNamespace>Bank_account</RootNamespace>
@@ -109,9 +132,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="Source.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
