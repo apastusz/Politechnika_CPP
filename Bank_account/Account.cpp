@@ -1,8 +1,11 @@
 #include<iostream>
 #include<string>
 #include"Account.h"
+#include <fstream>
 
 using namespace std;
+
+char znak_a;
 
 Current_Acc::Current_Acc(string c_nr, string c_wa, string c_ka, float c_opr,
 	float c_pr, float c_opl, float c_bs, float c_wp, float c_wy,
@@ -74,6 +77,7 @@ void Current_Acc::show_acc() {
 }
 
 void Current_Acc::load_acc_ub() {
+	
 	cout << "Podaj aktualne saldo " << get_Waluta() << ": ";
 	cin >> Biezace_saldo;
 	cout << "Podaj wysokosc wplaty " << get_Waluta() << ": ";
@@ -93,6 +97,27 @@ void Current_Acc::load_acc_ub() {
 
 
 void Current_Acc::show_acc_ub() {
+
+	cout << "Czy chcesz zapisac dane do pliku Y/N ?";
+	cin >> znak_a;
+
+	if (znak_a == 'Y' || znak_a == 'y') {
+
+		fstream plik;
+
+		plik.open("account.txt", ios::out | ios::app); // dodaj¹c ios::app dodaje kolejne rekordy do pliku nie nadpisuje
+
+		plik << "Saldo poczatkowe: " << get_Biezace_saldo() << " " << get_Waluta() << endl;
+		plik << "Wplata w³asna:" << get_Wplata() << " " << get_Waluta() << endl;
+		plik << "Wyplata: " << get_Wyplata() << " " << get_Waluta() << endl;
+		plik << "Przelew_przychodzacy: " << get_Przelew_prz() << " " << get_Waluta() << endl;
+		plik << "Przelew_wychodzacy: " << get_Przelew_wy() << " " << get_Waluta() << endl;
+		plik << "Saldo biezace: " << get_Biezace_saldo() << " " << get_Waluta() << endl;
+
+		plik.close();
+
+	}
+
 	cout << "Saldo poczatkowe: " << get_Biezace_saldo() << " " << get_Waluta() << endl;
 	cout << "Wplata w³asna:" << get_Wplata() << " " << get_Waluta() << endl;
 	cout << "Wyplata: " << get_Wyplata() << " " << get_Waluta() << endl;
